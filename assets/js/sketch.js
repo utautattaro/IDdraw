@@ -76,7 +76,7 @@ window.addEventListener("load", () => {
 });
 
 function drawImageToScale(img, ctx){
-	const img_width = 400;
+	const img_width = 300;
 	const scaleFactor = img_width / img.width;
 	const img_height = img.height * scaleFactor;
 	ctx.drawImage(img, 0 , 0, img_width, img_height);
