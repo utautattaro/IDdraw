@@ -56,8 +56,8 @@ window.addEventListener("load", () => {
 		ctx.strokeStyle = "#000000";
 
 		let pos;
-		if(e.touches){
-			pos = getpos(canvas, e.touches[0].clientX , touches[0].clientY);
+		if(e.type.match(/touch/)){
+			pos = getpos(canvas,e.changedTouches[0].clientX,e.changedTouches[0].clientY);
 		}else{
 			pos = getpos(canvas, e.clientX , e.clientY);
 		}
