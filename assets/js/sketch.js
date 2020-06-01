@@ -55,7 +55,13 @@ window.addEventListener("load", () => {
 		ctx.lineCap = 'round';
 		ctx.strokeStyle = "#000000";
 
-		let pos = getMousePos(canvas, e);
+		let pos;
+		if(e.touches){
+			pos = getpos(canvas, e.touches[0].clientX , touches[0].clientY);
+		}else{
+			pos = getpos(canvas, e.clientX , e.clientY);
+		}
+
 
 		ctx.lineTo(pos.x, pos.y);
 		ctx.stroke();
@@ -63,11 +69,11 @@ window.addEventListener("load", () => {
 		ctx.moveTo(pos.x, pos.y);
 	}
 
-	function getMousePos(canvas, evt) {
+	function getpos(canvas,x,y) {
 		var rect = canvas.getBoundingClientRect();
 		return {
-		  x: evt.clientX - rect.left,
-		  y: evt.clientY - rect.top
+		  x: x - rect.left,
+		  y: y - rect.top
 		};
 	}
 
