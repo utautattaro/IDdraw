@@ -10,8 +10,6 @@ window.addEventListener("load", () => {
 	// img.src = "assets/images/IMG_1427.JPG";
 
 	imgSource.addEventListener('change', (e) => {
-		console.log(imgSource);
-		console.log(e);
 		var reader = new FileReader();
 		reader.onload = function (e) {
 			img.src = e.target.result;
