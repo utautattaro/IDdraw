@@ -13,7 +13,7 @@
 	border: 1px solid black;
 }
 
-#clear {
+/* #clear {
 	display: inline-block;
 	width: 30px;
 	height: 30px;
@@ -22,7 +22,7 @@
 	font-size: 20px;
 	color: white;
 	background-color: #e3242b;
-}
+} */
 
 #clearLabel {
 	margin:30px;
